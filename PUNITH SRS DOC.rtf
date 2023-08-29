@@ -1,0 +1,245 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sl276\slmult1\fs22\lang9 STUDENT RESULT MANAGEMENT SYSTEM\par
+\par
+Report\par
+\par
+\par
+\par
+\par
+29/8/23\par
+Punith S\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+Table of Contents\par
+1. INTRODUCTION.....................................................................................................................................................1\par
+1.1 PURPOSE...............................................................................................................................................................1\par
+1.2 SCOPE....................................................................................................................................................................1\par
+1.3 DEFINITIONS, ACRONYMS, AND ABBREVIATIONS................................................................................................1\par
+1.4 REFERENCES.........................................................................................................................................................1\par
+1.5 OVERVIEW\par
+2. GENERAL DESCRIPTION....................................................................................................................................2\par
+2.1 PRODUCT PERSPECTIVE........................................................................................................................................2\par
+2.2 PRODUCT FUNCTIONS...........................................................................................................................................2\par
+2.3 USER CHARACTERISTICS......................................................................................................................................2\par
+2.4 GENERAL CONSTRAINTS.......................................................................................................................................2\par
+2.5 ASSUMPTIONS AND DEPENDENCIES......................................................................................................................3\par
+3. SPECIFIC REQUIREMENTS................................................................................................................................2\par
+3.1 EXTERNAL INTERFACE REQUIREMENTS...............................................................................................................3\par
+3.1.1 User Interfaces.............................................................................................................................................3\par
+3.1.2 Hardware Interfaces....................................................................................................................................4\par
+3.1.3 Software Interfaces......................................................................................................................................4\par
+3.1.4 Communications Interfaces..........................................................................................................................4\par
+3.2 FUNCTIONAL REQUIREMENTS...............................................................................................................................4\par
+3.3 OTHER REQUIREMENTS........................................................................................................................................4\par
+4. ANALYSIS MODELS..............................................................................................................................................5\par
+4.1 FLOW CHART........................................................................................................................................................5\par
+4.2. MODULE DESCRIPTION........................................................................................................................................5\par
+STUDENT  RESULT MANAGEMENT SYSTEM\par
+\par
+1. Introduction\par
+This document aims at defining overall software requirement for ACADEMIC RESULT\par
+MANAGEMENT SYSTEM .Efforts have been made to define the requirements\par
+exhaustively and accurately. The final product will be having only\par
+features/functionalities mentioned in this document and assumptions for any\par
+additional functionality/feature should not be made by any of the parties involved\par
+in developing/testing/implementing /using this product .\par
+1.1 Purpose\par
+This specification document describes the capabilities that will be provided by the\par
+software application STUDENT RESULT MANAGEMENT SYSTEM .It also states the\par
+various constraints by which the system will abide. The intended audience for this\par
+document are the development team, testing team and end users of the product.\par
+1.2 Scope\par
+The application will manage the information about various students enrolled in this\par
+course in different years, the subjects offered during different semesters of the course, the\par
+marks obtained by the various students in various subjects in different semesters.\par
+The application will greatly simplify and speed up the result preparation and management\par
+process.\par
+1.3 Definitions, Acronyms, and Abbreviations\par
+SRSSoftware\par
+Requirement Specification\par
+IEEEThe\par
+Institute of Electrical and Electronics Engineers\par
+DFDData\par
+Flow Diagram\par
+DBDatabase\par
+OSOperating\par
+System\par
+1.4 References\par
+IEEE 8301998\par
+standard for writing SRS document.\par
+Wikipedia\par
+Software engineering by KK Agrawal\par
+Software engineering by Roger S. Pressman\par
+Software Requirements Specification\par
+ACADEMIC RESULT MANAGEMENT SYSTEM\par
+1.5 Overview\par
+Student\rquote s information is stored in mysql the authority is given to Administrator; he gives\par
+the permission to instructor to enter the department data and student information. The\par
+security is providing by giving password to each instructor..\par
+2. General Description\par
+This section of the SRS should describe the general factors that affect 'the product and its\par
+requirements. It should be made clear that this section does not state specific\par
+requirements; it only makes those requirements easier to understand.\par
+2.1 Product Perspective\par
+The application will be windows based, selfcontained\par
+and independent software product.\par
+Backend\par
+DB\par
+2.2 Product Functions\par
+1) Information about the various Users\par
+2) Information about subjects offered in various semesters\par
+3) Marks obtain by Students in different semesters\par
+4) Generation of Reports\par
+2.3 User Characteristics\par
+This subsection of the SRS should describe those general characteristics of the eventual\par
+users of the product that will affect the specific requirements. (See the IEEE Guide to\par
+SRS for more details).\par
+2.4 General Constraints\par
+Users at university will have to implement a security policy to safeguard the\par
+marks related information being modified by unauthorized users (by means of\par
+gaining access to the backend database)\par
+Software Requirements Specification\par
+Front end client Application\par
+(with\par
+data/entry/update/delete/view\par
+and reporting facility)\par
+ACADEMIC RESULT MANAGEMENT SYSTEM\par
+2.5 Assumptions and Dependencies\par
+1) The number of subjects to be taken by the student in each semester does not change.\par
+2) The subject types do not change.\par
+3) The number of semester do not change.\par
+4) The users have sufficient knowledge of computers.\par
+5) The users know the English language, as the user interface will be provided in\par
+English.\par
+3. Specific Requirements\par
+This section contains the software requirements to a level of detail sufficient to enable\par
+designers to design the system and testers to test that system.\par
+3.1 External Interface Requirements\par
+3.1.1 User Interfaces\par
+The following screens will be provided:\par
+Login screen: This will be the first screen that will be displayed. It allows user to access\par
+different screens based upon the user role. Various fields available on this screen will be\par
+User id: alphanumeric of length up to 10char.\par
+Password: alphanumeric of length up to 10char\par
+Role: Will have the following\par
+Values: Administrator, Data entry Operator , student , teacher\par
+2) Subject info Parameter Screen:\par
+This screen will be accessible only to the Administrator. It will allow the user to enter the\par
+semester number for which the user wants to access the subject information.\par
+3) Student info Parameter Screen:\par
+This screen will be accessible only to the Administrator. It will allow the user to enter the\par
+Batch Year for which the user wants to access the student information.\par
+4) Student Information Screen: This screen will be accessible only to the Administrator.\par
+It will allow the user to modify the information about new/existing student for particular\par
+batch year. Various fields available on these screen are:\par
+Student Enrollment No: of the format B.E/YYYY where YYYY represents the batch year\par
+Student Name: only alphabetic letters and length up to 40 chars.\par
+Batch Year: of the format YYYY\par
+5) Marks Entry Parameter Screen: This screen will be accessible only to the Teacher. It\par
+will allow the user to enter the Batch Year, the semester number and the subject for\par
+which the user wants to access the marks information.\par
+6) Marks entry screen: Screen: This screen will be accessible only to the Teacher. It will\par
+Software Requirements Specification\par
+ACADEMIC RESULT MANAGEMENT SYSTEM\par
+allow the user to add/modify/delete information about the marks obtained in the selected\par
+subject by different students. It includes Student enrollment no, student name, internal\par
+marks, external marks, total marks.\par
+3.1.2 Hardware Interfaces\par
+1) Intel p4 processor with minimum 2GHz speed.\par
+2) RAM: Minimum 1GB\par
+3) Hard Disk: min 20GB\par
+3.1.3 Software Interfaces\par
+1) Turbo C++\par
+2) DB Server: SQL SERVER 2008\par
+3) OS: Window Vista/XP/7/8/10\par
+3.2 Functional Requirements\par
+Depending upon the user role he/she will be able to access only the specific modules of\par
+the system.\par
+1) Login facility for enabling only authorized access to the system\par
+2) User (with role Data Entry operator) will be able to modify /add/delete information\par
+about different students that are enrolled for the course in different years .\par
+3.3 Other Requirements\par
+NONFUNCTIONAL\par
+REQUIREMENT\par
+1 .Safety Requirements\par
+The database may get crashed at any certain time due to virus or operating system\par
+failure. Therefore, it is required to take the database backup\par
+2. Security Requirements\par
+We are going to develop a secured database for the university .Depending upon the\par
+category of user the access rights are decided. It means if the user is an administrator then\par
+he can be able to modify the data, delete, append etc. All other users other than staff only\par
+have the rights to retrieve the information about database.\par
+3. Hardware Constraints\par
+The system requires a database in order to store persistent data. The database should\par
+Software Requirements Specification\par
+ACADEMIC RESULT MANAGEMENT SYSTEM\par
+have backup capabilities\par
+DB Requirement\par
+The following information will be placed in DB:\par
+1) Subject info: Subject Name, Code, Semester\par
+2) Student Info: Student Enrolment Number, Student name, enrollment year.\par
+3) Marks info: Student Enrolment , Semester, internal marks in each subject, external\par
+marks in each subject\par
+4) User Account Info: UserName, User Id, password, role\par
+4. Analysis Models\par
+4.1 Flow Chart\par
+Context diagramSoftware\par
+Requirements Specification\par
+ACADEMIC RESULT MANAGEMENT SYSTEM\par
+LEVEL1\par
+DFD\par
+Software Requirements Specification\par
+ACADEMIC RESULT MANAGEMENT SYSTEM\par
+LEVEL 2\par
+DFD\par
+Software Requirements Specification\par
+ACADEMIC RESULT MANAGEMENT SYSTEM\par
+USE CASE DIAGRAM\par
+Software Requirements Specification\par
+ACADEMIC RESULT MANAGEMENT SYSTEM\par
+Software Requirements Specification\par
+ACADEMIC RESULT MANAGEMENT SYSTEM\par
+USE CASE DIAGRAM\par
+Software Requirements Specification Page\par
+ACADEMIC RESULT MANAGEMENT SYSTEM\par
+ER DIAGRAM\par
+Software Requirements Specification Page\par
+ACADEMIC RESULT MANAGEMENT SYSTEM\par
+Software Requirements Specification Page\par
+\par
+}
+ 
